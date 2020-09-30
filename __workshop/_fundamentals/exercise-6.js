@@ -12,7 +12,11 @@
 // JAVASCRIPT -> No
 
 function isPalindrome(theString) {
-  // Your code here
+  if (typeof theString !== 'string'){
+    return undefined;
+  }
+  let reversed = theString.split('').reverse().join('')
+  return theString === reversed
 }
 
 // Part 2 - Test

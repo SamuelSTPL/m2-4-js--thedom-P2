@@ -6,5 +6,13 @@ test("Exercise 2", () => {
   expect(redacted(["bacon", false, 42])).toStrictEqual(["redacted", false, 42]);
   // add more tests here...
 });
+test("Exercise 2", () => {
+  expect(redacted(["munchies", false, 'hello'])).toStrictEqual(["redacted", false, "redacted"]);
+  // add more tests here...
+});
+test("Exercise 2", () => {
+  expect(redacted(["bacon", false, 42])).toStrictEqual(["redacted", false, 42]);
+  // add more tests here...
+});
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

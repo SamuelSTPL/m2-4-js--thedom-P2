@@ -9,9 +9,35 @@
 // - To represent a newline character, you can use "\n".
 
 const wrapAfter40Chars = (paragraph) => {
-  // Your code here
+  let chars = paragraph.split("");
+  let count = 0;
+  let output = [];
+  chars.forEach(function (char) {
+    if (count % 40 === 0 && count > 0) {
+      output.push("\n");
+      if (char !== " ") {
+        output.push(char);
+      }
+      count++;
+    } else if (
+      !(char === " " && output[output.length - 1] === "\n" && count > 0)
+    ) {
+      // console.log(output[output.length-1], ' | ', char);
+      output.push(char);
+      count++;
+    } else if (count === 0) {
+      output.push(char);
+      count++;
+    }
+  });
+  return output.join("");
 };
 
+console.log(
+  wrapAfter40Chars(
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  )
+);
 // Part 2 - Test
 // --------------
 // Test your function.

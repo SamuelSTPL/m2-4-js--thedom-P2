@@ -11,7 +11,11 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  return arr.reduce((total, element) => {
+    if (typeof element[key] !== 'number'){
+    }
+    return total += element[key];
+  }, 0);
 };
 
 // Part 2 - Test

@@ -10,6 +10,19 @@ test("Exercise 1", () => {
     "4",
     "5",
   ]);
+  expect(convertToString([5, 1000, 10, 3])).toStrictEqual([
+    "5",
+    "1000",
+    "10",
+    "3",
+  ]);
+  expect(convertToString([1, 10, 100, 1000, 10000])).toStrictEqual([
+    "1",
+    "10",
+    "100",
+    "1000",
+    "10000",
+  ]);
   // add more tests here...
 });
 
